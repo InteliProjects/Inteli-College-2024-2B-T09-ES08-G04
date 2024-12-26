@@ -1,0 +1,32 @@
+Inspeção Predial - Relatório Técnico
+
+Data 20112024  
+Engenheiro Responsável Carlos Alberto da Silva  
+CREA 1234567-DF  
+
+1. Estrutura  
+- Estado geral Bom  
+- Trincas Pequenas fissuras em paredes internas (andar 2, sala 203).  
+- Recomendação Monitoramento trimestral das fissuras e pintura protetiva.  
+
+2. Instalações Hidráulicas  
+- Estado geral Satisfatório  
+- Vazamentos Identificado pequeno vazamento no banheiro da recepção.  
+- Recomendação Troca da vedação do registro e reavaliação em 30 dias.  
+
+3. Instalações Elétricas  
+- Estado geral Regular  
+- Problemas Painel elétrico apresentando oxidação leve nos terminais.  
+- Recomendação Substituição dos terminais afetados e revisão completa por eletricista qualificado.  
+
+4. Cobertura  
+- Estado geral Bom  
+- Observações Telhas limpas e bem fixadas, mas com acúmulo leve de folhas nas calhas.  
+- Recomendação Limpeza das calhas em até 7 dias.  
+
+5. Conclusão  
+O edifício apresenta boas condições estruturais e funcionais. Algumas pequenas correções são recomendadas para manter o bom estado de conservação.  
+
+Assinado eletronicamente,  
+Carlos Alberto da Silva  
+Engenheiro Civil  

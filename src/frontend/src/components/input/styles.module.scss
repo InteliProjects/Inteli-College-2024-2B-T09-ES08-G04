@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+
+  &__label {
+    color: #666;
+    font-family: "Popins", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: .3rem;
+  }
+
+  &__input {
+    height: 3rem;
+    min-width: 24rem;
+    max-width: 100%;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid rgba(102, 102, 102, 0.35);
+    background: transparent;
+    padding: 0 1rem;
+
+    &::placeholder {
+      color: #666;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    &__input {
+      box-sizing: border-box;
+      min-width: 100%;
+      max-width: 90%;
+    }
+  }
+}

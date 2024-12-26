@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 100s # Intervalo padrão para coletar métricas
+
+scrape_configs:
+  - job_name: 'api-gateway' # Nome do job para identificar as métricas
+    static_configs:
+      - targets: ['api-gateway:5000'] # Alvo: o serviço e a porta do API Gateway

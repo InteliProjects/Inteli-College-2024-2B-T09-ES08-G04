@@ -1,0 +1,421 @@
+.container {
+  margin: 2rem 6rem;
+
+  &--initial {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 6rem;
+    flex-direction: column;
+
+    &__title {
+      color: #333;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &__line {
+      width: 100%;
+      height: 1px;
+      background: #80771E;
+      margin: 2rem 0;
+    }
+
+    &__div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      &__subtitle {
+        color: #333;
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+      }
+
+      &__button {
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: rgba(91, 85, 26, 0.73);
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          cursor: pointer;
+          color: rgba(61, 56, 11, 0.916);
+        }
+      }
+
+      &__documents {
+        margin: 2rem 6rem;
+
+        &__ul {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 100%;
+
+          &__li {
+            border-radius: 30px;
+            border: 1px solid #80771E;
+            background: #EEE;
+            padding: 1.5rem 2rem;
+            width: 450px;
+            max-height: 276px;
+            margin-bottom: 2rem;
+
+            &__div {
+              display: flex;
+              gap: 1rem;
+              flex-direction: column;
+      
+              &__title {
+                color: #333;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+      
+              &__project-name {
+                display: flex;
+                min-width: 7rem;
+                max-width: 10rem;
+                height: 1.5rem;
+                padding: 2px 2px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 12px;
+                background: rgba(91, 85, 26, 0.27);
+                color: #333;
+                font-size: .8rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+              }
+      
+              &__description, &__date {
+                color: #333;
+                font-size: .8rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+              }
+      
+              &__button {
+                display: flex;
+                height: 3rem;
+                padding: 16px 32px;
+                justify-content: center;
+                align-items: center;
+                align-self: stretch;
+                border-radius: 100px;
+                border: 0.5px solid rgba(91, 85, 26, 0.73);
+                color: rgba(91, 85, 26, 0.73);
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                transition: all 0.3s ease;
+      
+                &:hover {
+                  background: #a89b2a37;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__back {
+      width: 50%;
+      outline: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(53, 49, 15, 0.61);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  &__title {
+    color: #333;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__content {
+    padding: 2rem;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh; 
+    overflow-y: auto; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 8px; 
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f4f4f4; 
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(91, 85, 26, 0.73); 
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(61, 56, 11, 0.916); 
+    }
+  }
+
+  &__button {
+    &--close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
+  
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &--group {
+      display: flex;
+      flex-direction: column;
+
+      &__label {
+        color: #666;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 7px;
+      }
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        text-align: center;
+        color: #80771e;
+        cursor: pointer;
+        border-radius: 24px;
+        background-color: rgba(91, 85, 26, 0.20);
+        height: 196px;
+        gap: 22px;
+        align-self: stretch;
+    
+        input[type="file"] {
+          display: none;
+        }
+
+        span, img {
+          background: transparent;
+        }
+      }
+
+      &__textarea {
+        box-sizing: border-box;
+        width: 100%;
+        height: 163px;
+        align-self: stretch;
+        padding: 0.5rem;
+        resize: none;
+        border-radius: 12px;
+        border: 1px solid rgba(102, 102, 102, 0.35);
+      }
+    }
+
+    &__button {
+      background: #80771e;
+      color: #fff;
+      padding: 15px 0px 16px 0px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1rem;
+      
+      &:hover {
+        cursor: pointer;
+        background: #a89b2a;
+      }
+    }
+  }
+}
+
+.modal__form--group__container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  color: #80771e;
+  cursor: pointer;
+  border-radius: 24px;
+  background-color: rgba(91, 85, 26, 0.20);
+  height: 196px;
+  gap: 22px;
+  align-self: stretch;
+  position: relative;
+  width: 100%;
+
+  input[type="file"] {
+    display: none; 
+  }
+
+  span {
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 2rem 2rem;
+
+    &--initial {
+      margin: 0rem 2rem;
+      flex-direction: column;
+      align-items: start;
+
+      &__title {
+        font-size: 1.5rem;
+      }
+
+      &__button {
+        font-size: .8rem;
+        padding: 0;
+        margin-top: 1.5rem;
+      }
+
+      &__div {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+
+        &__button {
+          padding-left: 0px;
+          margin-top: 1rem;
+        }
+
+        &__documents {
+          margin: 2rem 2rem;
+        }
+      }
+    }
+
+    &__ul {
+      justify-content: center;
+
+      &__li {
+        width: 100%;
+      }
+    }
+  }
+
+  .modal {
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    &__content {
+      padding: 1rem;
+      height: auto; 
+      max-height: none;
+      overflow-y: hidden; 
+      overflow-x: hidden; 
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      text-align: center;
+      width: 90%;
+    }
+
+    &__form {
+      &--group {
+        &__container {
+          height: 100px;
+        }
+
+        &__textarea {
+          height: 100px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

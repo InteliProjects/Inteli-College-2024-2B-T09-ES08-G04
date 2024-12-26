@@ -1,0 +1,144 @@
+[
+  {
+    "collection": "users",
+    "documents": [
+      {
+        "_id": "user1",
+        "name": "Alice",
+        "email": "alice@example.com",
+        "role": "admin",
+        "teams": [
+          "team1",
+          "team2"
+        ]
+      },
+      {
+        "_id": "user2",
+        "name": "Bob",
+        "email": "bob@example.com",
+        "role": "user",
+        "teams": [
+          "team1"
+        ]
+      },
+      {
+        "_id": "user3",
+        "name": "Charlie",
+        "email": "charlie@example.com",
+        "role": "user",
+        "teams": [
+          "team2"
+        ]
+      }
+    ]
+  },
+  {
+    "collection": "teams",
+    "documents": [
+      {
+        "_id": "team1",
+        "name": "Development Team",
+        "members": [
+          {
+            "userId": "user1",
+            "accessLevel": "owner"
+          },
+          {
+            "userId": "user2",
+            "accessLevel": "member"
+          }
+        ]
+      },
+      {
+        "_id": "team2",
+        "name": "Marketing Team",
+        "members": [
+          {
+            "userId": "user1",
+            "accessLevel": "member"
+          },
+          {
+            "userId": "user3",
+            "accessLevel": "owner"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "collection": "projects",
+    "documents": [
+      {
+        "_id": "project1",
+        "name": "Website Redesign",
+        "description": "Redesign the corporate website for better user experience.",
+        "teamId": "team1",
+        "status": "in progress"
+      },
+      {
+        "_id": "project2",
+        "name": "Social Media Campaign",
+        "description": "Launch a new social media campaign for the product.",
+        "teamId": "team2",
+        "status": "planning"
+      }
+    ]
+  },
+  {
+    "collection": "documents",
+    "documents": [
+      {
+        "_id": "doc1",
+        "projectId": "project1",
+        "fileName": "inspecao.txt.enc",
+        "originalFileName": "inspecao.txt",
+        "description": "teste de descrição do arquivo",
+        "uploadDate": "2024-12-03T17:36:42.553Z",
+        "formattedUploadDate": "03/12/2024, 14:36:42",
+        "encryptionKey": "68134aa954fb82bf76132b4504ff1d407f9b65ac007b2c02e5465d7dd3575f79",
+        "iv": "ab7e83467e6fa0b54724b502353a379b",
+        "s3Url": "https://inspetec.s3.amazonaws.com/inspecao.txt.enc"
+      },
+      {
+        "_id": "doc2",
+        "title": "Campaign Strategy",
+        "content": "Outline of the social media campaign strategy.",
+        "projectId": "project2",
+        "fileName": "testeteste.txt.enc",
+        "originalFileName": "testeteste.txt",
+        "description": "teste de descrição do arquivo testeteste",
+        "uploadDate": "2024-12-03T17:40:29.515Z",
+        "formattedUploadDate": "03/12/2024, 14:40:29",
+        "encryptionKey": "cd3c39b69952120bbbbbd54212618cd7aaf04504130fa634d963dc97eb4d9e15",
+        "iv": "e70b7f363312a2e6f42a6c7233b0584f",
+        "s3Url": "https://inspetec.s3.amazonaws.com/testeteste.txt.enc"
+      }
+    ]
+  },
+  {
+    "collection": "devices",
+    "documents": [
+      {
+        "_id": "device1",
+        "userId": "user1",
+        "deviceName": "Alice's MacBook",
+        "deviceType": "laptop",
+        "lastAccessed": "2024-11-10T08:30:00Z"
+      },
+      {
+        "_id": "device2",
+        "userId": "user2",
+        "deviceName": "Bob's iPhone",
+        "deviceType": "mobile",
+        "lastAccessed": "2024-11-10T09:00:00Z"
+      },
+      {
+        "_id": "device3",
+        "userId": "user3",
+        "deviceName": "Charlie's iPad",
+        "deviceType": "tablet",
+        "lastAccessed": "2024-11-10T10:00:00Z"
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+.container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(91, 85, 26, 0.73);
+  backdrop-filter: blur(4px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    &__div {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  
+  &__div {
+    border-radius: 24px;
+    background: #EEE;
+    padding: 2.5rem 8rem 2.5rem 8rem;
+
+    &__infos {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
+
+      &__image {
+        width: 8.93rem;
+        height: 8.06rem;
+      }
+
+      &__title {
+        color: #333;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0rem 1rem;
+    &__div {
+      padding: 2.5rem 1rem 2.5rem 1rem;
+      width: 100%;
+
+      &__infos {
+        &__image {
+          width: 6.93rem;
+          height: 6.06rem;
+        }
+
+        &__title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

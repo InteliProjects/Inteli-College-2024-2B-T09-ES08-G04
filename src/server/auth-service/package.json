@@ -1,0 +1,28 @@
+{
+  "name": "auth0-express-webapp-sample",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "axios-mock-adapter": "^2.1.0",
+    "debug": "~3.2.7",
+    "dotenv": "^6.1.0",
+    "ejs": "^3.1.8",
+    "express": "^4.21.1",
+    "express-jwt": "^8.5.1",
+    "express-openid-connect": "^2.17.1",
+    "http-errors": "~1.8.1",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.1.0",
+    "mongodb": "^6.11.0",
+    "morgan": "~1.10.0",
+    "require": "^2.4.20",
+    "ua-parser-js": "^2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

@@ -1,0 +1,156 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__container {
+
+    &__img {
+      width: 70px;
+      height: 63px;
+    }
+  }
+
+  &__menuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 47px;
+      height: 50px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-right: 10.37rem;
+
+    &__ul {
+      display: flex;
+      list-style-type: none;
+      gap: 2rem;
+      align-items: center;
+
+      &__li {
+        display: flex;
+        padding: 1rem 1rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        background: #80771e;
+        transition: all 0.3s ease;
+
+        &--group {
+          position: absolute;
+          right: 6rem;
+
+          &__paragraph {
+            font-weight: medium;
+            color: #80771E;
+
+            &__span {
+              color: #333333;
+              font-weight: 200;
+            }
+          }
+        }
+
+        &:hover {
+          background: #a89b2a;
+          cursor: pointer;
+        }
+
+        &__a {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.73);
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+
+          &__not_selected {
+            color: rgba(91, 85, 26, 0.73);
+            background: transparent;
+          }
+
+          &__selected {
+            color: rgba(255, 255, 255, 0.73);
+            background: transparent;
+          }
+        }
+
+        &__not_selected {
+          background: transparent;
+          border: 0.5px solid rgba(91, 85, 26, 0.73);
+          color: rgba(91, 85, 26, 0.73);
+
+          &:hover {
+            background: #a89b2a37;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &.menuActive {
+    .header__nav {
+      display: flex;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 6rem;
+      left: 0;
+      width: 100%;
+
+      &.open {
+        display: flex;
+      }
+
+      &__ul {
+        flex-direction: column;
+        background: #80761e10;
+        gap: 2rem;
+        padding: 3rem;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+
+        &__li {
+          width: 70%;
+          text-align: center;
+
+          &__a {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    &__menuButton {
+      display: block;
+    }
+  }
+}
